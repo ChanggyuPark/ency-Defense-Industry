@@ -1,4 +1,4 @@
-/* ENCY Defense Industry | Sixshop page2767283 | v02 | split embedded image assets */
+/* ENCY Defense Industry | Sixshop page2767283 | v03 | split embedded image assets */
 (()=>{
 'use strict';
 const PATH='/defense-industry';
@@ -12,7 +12,7 @@ async function mount(){
  if(busy||document.getElementById(ROOT_ID))return;
  busy=true;const ticket=++generation;
  try{
-  const urls=Array.from({length:PARTS},(_,i)=>new URL('assets/defense-part-'+String(i).padStart(2,'0')+'.txt?v=20261112-02',SOURCE_URL).href);
+  const urls=Array.from({length:PARTS},(_,i)=>new URL('assets/defense-part-'+String(i).padStart(2,'0')+'.txt?v=20261112-03',SOURCE_URL).href);
   const fragments=await Promise.all(urls.map(async url=>{const res=await fetch(url);if(!res.ok)throw new Error('Asset HTTP '+res.status+' '+url);return res.text()}));
   if(ticket!==generation||!match())return;
   const page=document.getElementById(PAGE_ID);
